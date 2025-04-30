@@ -1,0 +1,55 @@
+✅ Załadowano 39209 obrazków.
+🧪 Trening: 31367 | Walidacja: 7842
+2025-04-16 12:28:22.337009: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-04-16 12:28:22.985212: I tensorflow/core/common_runtime/process_util.cc:146] Creating new thread pool with default inter op setting: 2. Tune using inter_op_parallelism_threads for best performance.
+Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv2d (Conv2D)             (None, 30, 30, 32)        896       
+                                                                 
+ max_pooling2d (MaxPooling2D  (None, 15, 15, 32)       0         
+ )                                                               
+                                                                 
+ conv2d_1 (Conv2D)           (None, 13, 13, 64)        18496     
+                                                                 
+ max_pooling2d_1 (MaxPooling  (None, 6, 6, 64)         0         
+ 2D)                                                             
+                                                                 
+ flatten (Flatten)           (None, 2304)              0         
+                                                                 
+ dense (Dense)               (None, 128)               295040    
+                                                                 
+ dropout (Dropout)           (None, 128)               0         
+                                                                 
+ dense_1 (Dense)             (None, 43)                5547      
+                                                                 
+=================================================================
+Total params: 319,979
+Trainable params: 319,979
+Non-trainable params: 0
+_________________________________________________________________
+Epoch 1/10
+981/981 [==============================] - 21s 16ms/step - loss: 1.8431 - accuracy: 0.4728 - val_loss: 0.5609 - val_accuracy: 0.8646
+Epoch 2/10
+981/981 [==============================] - 15s 15ms/step - loss: 0.7068 - accuracy: 0.7734 - val_loss: 0.2301 - val_accuracy: 0.9444
+Epoch 3/10
+981/981 [==============================] - 14s 14ms/step - loss: 0.4434 - accuracy: 0.8569 - val_loss: 0.1499 - val_accuracy: 0.9616
+Epoch 4/10
+981/981 [==============================] - 14s 14ms/step - loss: 0.3385 - accuracy: 0.8919 - val_loss: 0.0977 - val_accuracy: 0.9804
+Epoch 5/10
+981/981 [==============================] - 14s 14ms/step - loss: 0.2693 - accuracy: 0.9148 - val_loss: 0.0729 - val_accuracy: 0.9825
+Epoch 6/10
+981/981 [==============================] - 14s 14ms/step - loss: 0.2190 - accuracy: 0.9295 - val_loss: 0.0617 - val_accuracy: 0.9853
+Epoch 7/10
+981/981 [==============================] - 14s 14ms/step - loss: 0.1901 - accuracy: 0.9391 - val_loss: 0.0581 - val_accuracy: 0.9875
+Epoch 8/10
+981/981 [==============================] - 14s 14ms/step - loss: 0.1648 - accuracy: 0.9463 - val_loss: 0.0570 - val_accuracy: 0.9860
+Epoch 9/10
+981/981 [==============================] - 14s 14ms/step - loss: 0.1421 - accuracy: 0.9527 - val_loss: 0.0369 - val_accuracy: 0.9906
+Epoch 10/10
+981/981 [==============================] - 14s 14ms/step - loss: 0.1298 - accuracy: 0.9565 - val_loss: 0.0334 - val_accuracy: 0.9915
+💾 Model zapisany jako gtsrb_model.h5
+
+Process finished with exit code 0
